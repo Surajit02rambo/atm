@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aladin&family=Allerta+Stencil&family=Anton&family=Archivo+Black&family=Bungee&family=Bungee+Shade&family=Chakra+Petch:wght@700&family=Comfortaa:wght@300&family=Comforter&family=Fjalla+One&family=Great+Vibes&family=Josefin+Sans:wght@300&family=Manrope:wght@600&family=Maven+Pro:wght@400;500&family=Monoton&family=Orbitron:wght@500&family=Outfit:wght@500&family=Pacifico&family=Playball&family=Poiret+One&family=Quicksand&family=Quintessential&family=Readex+Pro&family=Righteous&family=Unica+One&family=Yesteryear&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        body{
+            top: 0;
+            right: 0;
+            box-sizing: border-box;
+            background: url(arbitrary.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .wrapper{
+            height: 600px;
+            width: 500px;
+            background-color: rgba(244, 255, 254, 0.459);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(5px);
+            margin-top: 75px;
+            margin-left: 50px;
+            border-radius: 20px;
+        }
+        .wrapper_content{
+            list-style-type: none;
+        }
+        .wrapper_content li{
+            justify-content: center;
+            align-items: center;
+        }
+        button, button::after {
+  width: 410px;
+  height: 116px;
+  font-size: 20px;
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(45deg, transparent 5%, #000522d8 5%);
+  border: 0;
+  color: #fff;
+  letter-spacing: 3px;
+  line-height: 88px;
+  box-shadow: 4px 0px 0px #02afffb7;
+  outline: transparent;
+  position: relative;
+  cursor: cell;
+  text-shadow: -0.4px -0.4px 0.4px aqua,
+                0.4px 0.4px 0.4px aqua;
+}
+
+button::after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+  
+  content: 'AVAILABLE NOW';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 3%, #ffffff 3%, #ffffff 5%, #010f1b 5%);
+  text-shadow: -3px -3px 0px #10463d, 3px 3px 0px #03b0b9;
+  clip-path: var(--slice-0);
+}
+
+button:hover::after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+.b1{
+    position: absolute;
+    margin-top: 200px;
+}
+.b2{
+    position: absolute;
+    margin-top: 400px;
+}
+i{
+    font-size: 30px !important;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 15555;
+  top: 0;
+  left: 0;
+  background-color: #99a1a7;
+  background-repeat: no-repeat;
+  background-size: 500px;
+  background-position-x: center;
+  background-position-y: 70px;
+  overflow-x: hidden;
+  transition: 0.5s;
+  text-align:center;
+  border-radius: 20px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+
+}
+
+.sidenav a:hover{
+  color: #f1f1f1;
+}
+
+.sidenav img{
+    justify-content: center;
+    align-items: center;
+    margin-left: -80px !important;
+    margin-top: 20px !important;
+}
+
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(110, 134, 148, 0.979);
+  overflow-y: hidden;
+  overflow-x: hidden;
+  transition: 0.5s;
+  border-radius: 20px;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #fffbfb;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+#numpad {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 height: 385px;
+	 width: 210px;
+	 margin-top: -212.5px;
+	 margin-left: -115px;
+	 background: url(svgback.png);
+	 font-size: 15px;
+	 font-weight: 300;
+	 padding: 20px;
+	 backface-visibility: hidden;
+   border-radius: 20px;
+   font-family: 'Orbitron', sans-serif;
+}
+ #complete {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 height: 385px;
+	 width: 210px;
+	 margin-top: -212.5px;
+	 margin-left: -115px;
+	 background-color: rgba(25, 25, 25, 0.5);
+	 font-size: 15px;
+	 font-weight: 300;
+	 padding: 20px;
+	 line-height: 380px;
+	 text-align: center;
+	 backface-visibility: hidden;
+	 transform: rotateY(180deg, 1000);
+}
+ #notice {
+	 position: relative;
+	 float: left;
+	 clear: both;
+	 width: 210px;
+	 padding: 10px 0;
+	 text-align: center;
+	 margin-bottom: 5px;
+   color: whitesmoke;
+}
+ #notice::selection {
+	 background: transparent;
+}
+ #password {
+	 position: relative;
+	 float: left;
+	 clear: both;
+	 width: 210px -10px;
+	 padding: 5px 5px;
+	 text-align: center;
+	 margin-bottom: 5px;
+}
+ #password::selection {
+	 background: transparent;
+}
+ .bleep {
+	 position: relative;
+	 display: inline-block;
+	 width: 42px;
+	 height: 42px;
+	 margin: 0 2px;
+	 background: rgba(167, 162, 162, 0.6);
+	 border-radius: 50px;
+}
+ .bleep label {
+	 width: 42px;
+	 height: 42px;
+	 cursor: pointer;
+	 position: absolute;
+	 left: 0;
+	 top: 0;
+}
+ .bleep label:after {
+	 content: '';
+	 width: 21px;
+	 height: 21px;
+	 position: absolute;
+	 top: 10.5px;
+	 left: 10.5px;
+	 opacity: 0;
+	 border-radius: 50px;
+}
+ #bleep-one-display label:after {
+	 background: #090113;
+}
+ #bleep-two-display label:after {
+	 background: #090113;
+}
+ #bleep-three-display label:after {
+	 background: #090113;
+}
+ #bleep-four-display label:after {
+	 background: #090113;
+}
+ .bleep input[type=checkbox] {
+	 visibility: hidden;
+}
+ .bleep input[type=checkbox]:checked + label:after {
+	 opacity: 1;
+}
+ .password-indicator {
+	 height: 36px;
+	 width: 36px;
+	 cursor: pointer;
+	 padding: 2px 0;
+	 margin: 0 3px;
+}
+ #num {
+	 position: relative;
+	 float: left;
+	 clear: both;
+	 width: 210px;
+	 text-align: center;
+	 margin-bottom: 5px;
+	 padding-bottom: 10px;
+}
+ .button {
+	 position: relative;
+	 float: left;
+	 height: 50px;
+	 width: 50px;
+	 margin: 10px;
+	 color: #9a9a9a;
+	 font-weight: 300;
+	 font-size: 18px;
+	 text-align: center;
+	 line-height: 48px;
+	 cursor: pointer;
+	 border-radius: 50px;
+}
+ #button-1 {
+	 box-shadow: 0 1px 0 0 rgba(238, 49, 156, .25), 0 -1px 0 0 rgba(249, 58, 99, .25), 1px 0 0 0 rgba(238, 49, 156, .25), -1px 0 0 0 rgba(249, 58, 99, .25), 1px -1px 0 0 rgba(244, 53, 128, .5), -1px 1px 0 0 rgba(244, 53, 128, .5), 1px 1px 0 0 rgba(232, 44, 184, .75), -1px -1px 0 0 rgba(255, 62, 71, .75);
+}
+ #button-2 {
+	 box-shadow: 0 1px 0 0 rgba(219, 44, 220, .25), 0 -1px 0 0 rgba(228, 44, 196, .25), 1px 0 0 0 rgba(219, 44, 220, .25), -1px 0 0 0 rgba(228, 44, 196, .25), 1px -1px 0 0 rgba(223, 44, 208, .5), -1px 1px 0 0 rgba(223, 44, 208, .5), 1px 1px 0 0 rgba(214, 44, 232, .75), -1px -1px 0 0 rgba(232, 44, 184, .75);
+}
+ #button-4 {
+	 box-shadow: 0 1px 0 0 rgba(219, 44, 220, .25), 0 -1px 0 0 rgba(228, 44, 196, .25), 1px 0 0 0 rgba(219, 44, 220, .25), -1px 0 0 0 rgba(228, 44, 196, .25), 1px -1px 0 0 rgba(223, 44, 208, .5), -1px 1px 0 0 rgba(223, 44, 208, .5), 1px 1px 0 0 rgba(214, 44, 232, .75), -1px -1px 0 0 rgba(232, 44, 184, .75);
+}
+ #button-3 {
+	 box-shadow: 0 1px 0 0 rgba(141, 58, 249, .25), 0 -1px 0 0 rgba(190, 49, 238, .25), 1px 0 0 0 rgba(141, 58, 249, .25), -1px 0 0 0 rgba(190, 49, 238, .25), 1px -1px 0 0 rgba(166, 53, 244, .5), -1px 1px 0 0 rgba(166, 53, 244, .5), 1px 1px 0 0 rgba(117, 62, 255, .75), -1px -1px 0 0 rgba(214, 44, 232, .75);
+}
+ #button-5 {
+	 box-shadow: 0 1px 0 0 rgba(141, 58, 249, .25), 0 -1px 0 0 rgba(190, 49, 238, .25), 1px 0 0 0 rgba(141, 58, 249, .25), -1px 0 0 0 rgba(190, 49, 238, .25), 1px -1px 0 0 rgba(166, 53, 244, .5), -1px 1px 0 0 rgba(166, 53, 244, .5), 1px 1px 0 0 rgba(117, 62, 255, .75), -1px -1px 0 0 rgba(214, 44, 232, .75);
+}
+ #button-7 {
+	 box-shadow: 0 1px 0 0 rgba(141, 58, 249, .25), 0 -1px 0 0 rgba(190, 49, 238, .25), 1px 0 0 0 rgba(141, 58, 249, .25), -1px 0 0 0 rgba(190, 49, 238, .25), 1px -1px 0 0 rgba(166, 53, 244, .5), -1px 1px 0 0 rgba(166, 53, 244, .5), 1px 1px 0 0 rgba(117, 62, 255, .75), -1px -1px 0 0 rgba(214, 44, 232, .75);
+}
+ #button-8 {
+	 box-shadow: 0 1px 0 0 rgba(71, 130, 238, .25), 0 -1px 0 0 rgba(102, 85, 249, .25), 1px 0 0 0 rgba(71, 130, 238, .25), -1px 0 0 0 rgba(102, 85, 249, .25), 1px -1px 0 0 rgba(86, 108, 244, .5), -1px 1px 0 0 rgba(86, 108, 244, .5), 1px 1px 0 0 rgba(55, 153, 232, .75), -1px -1px 0 0 rgba(117, 62, 255, .75);
+}
+ #button-6 {
+	 box-shadow: 0 1px 0 0 rgba(71, 130, 238, .25), 0 -1px 0 0 rgba(102, 85, 249, .25), 1px 0 0 0 rgba(71, 130, 238, .25), -1px 0 0 0 rgba(102, 85, 249, .25), 1px -1px 0 0 rgba(86, 108, 244, .5), -1px 1px 0 0 rgba(86, 108, 244, .5), 1px 1px 0 0 rgba(55, 153, 232, .75), -1px -1px 0 0 rgba(117, 62, 255, .75);
+}
+ #button-c {
+	 box-shadow: 0 1px 0 0 rgba(71, 130, 238, .25), 0 -1px 0 0 rgba(102, 85, 249, .25), 1px 0 0 0 rgba(71, 130, 238, .25), -1px 0 0 0 rgba(102, 85, 249, .25), 1px -1px 0 0 rgba(86, 108, 244, .5), -1px 1px 0 0 rgba(86, 108, 244, .5), 1px 1px 0 0 rgba(55, 153, 232, .75), -1px -1px 0 0 rgba(117, 62, 255, .75);
+}
+ #button-9 {
+	 box-shadow: 0 1px 0 0 rgba(47, 117, 232, .25), 0 -1px 0 0 rgba(52, 141, 232, .25), 1px 0 0 0 rgba(47, 117, 232, .25), -1px 0 0 0 rgba(52, 141, 232, .25), 1px -1px 0 0 rgba(50, 129, 232, .5), -1px 1px 0 0 rgba(50, 129, 232, .5), 1px 1px 0 0 rgba(44, 105, 232, .75), -1px -1px 0 0 rgba(55, 153, 232, .75);
+}
+ #button-0 {
+	 box-shadow: 0 1px 0 0 rgba(47, 117, 232, .25), 0 -1px 0 0 rgba(52, 141, 232, .25), 1px 0 0 0 rgba(47, 117, 232, .25), -1px 0 0 0 rgba(52, 141, 232, .25), 1px -1px 0 0 rgba(50, 129, 232, .5), -1px 1px 0 0 rgba(50, 129, 232, .5), 1px 1px 0 0 rgba(44, 105, 232, .75), -1px -1px 0 0 rgba(55, 153, 232, .75);
+}
+ #button-e {
+	 box-shadow: 0 1px 0 0 rgba(58, 206, 249, .25), 0 -1px 0 0 rgba(49, 139, 238, .25), 1px 0 0 0 rgba(58, 206, 249, .25), -1px 0 0 0 rgba(49, 139, 238, .25), 1px -1px 0 0 rgba(53, 172, 244, .5), -1px 1px 0 0 rgba(53, 172, 244, .5), 1px 1px 0 0 rgba(62, 239, 255, .75), -1px -1px 0 0 rgba(44, 105, 232, .75);
+}
+ .button::selection {
+	 background: transparent;
+}
+ .button:hover {
+	 color: #fff;
+}
+.scanbox{
+  position: absolute;
+  margin-top: -380px;
+  margin-left: 50px;
+  border: 3px solid aqua;
+  height: 400px;
+  width: 400px;
+  border-radius: 20px;
+  background-color: rgba(29, 174, 190, 0.144);
+  cursor: cell;
+}
+ .scanbox:hover .scanbar{
+  position: absolute;
+  height: 30px;
+  width: 400px;
+  background-color: #09daff;
+  mix-blend-mode: difference;
+  animation: move 2s infinite ease-out;
+  border-radius: 25px !important;
+}
+.scanbox:hover pre{
+  visibility: visible !important;
+  font-size: 23px;
+  font-family: 'Orbitron', sans-serif;
+  color: #011927;
+  text-shadow: -0.4px -0.4px 0.4px rgb(0, 255, 234),
+                0.4px 0.4px 0.4px rgb(0, 247, 255);
+  text-align: center;
+  margin-top: 360px;
+}
+.scanbox pre{
+  visibility: hidden;
+  animation: blinker 1s ease-in-out infinite;
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+@keyframes move {
+  0%,
+  100% {
+    transform: translateY(340px);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  75% {
+    transform: translateY(370px);
+  }
+}
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <ul class="wrapper_content">
+            <li class="b1"><button onclick="openNav()"><i class='fas fa-fingerprint'></i> &nbspFINGERPRINT SCAN</button></li>
+            <li class="b2"><button onclick="openTab()"><i class="fa fa-keyboard-o"></i> &nbspENTER NUMPAD</button></li>
+            
+<div id="mySidenav" class="sidenav">
+    <img src="fingerprint-removebg-preview.png">
+    <div class="scanbox">
+      <div class="scanbar"></div>
+      <pre><b>SCANNING</b></pre>
+    </div>
+    <button onclick="closeNav()" style="margin-top: 50px;">
+        <i class='fas fa-reply-all'></i> &nbspMAIN MENU</button>
+  </div>
+    
+  <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeTab()">&times;</a>
+    <div id="numpad">
+      <span id="notice">Enter passcode to begin</span>
+      
+      <div id="password">
+        
+        <div class="bleep" id="bleep-one-display">
+          <input type="checkbox" value="None" id="bleep-one" />
+          <label for="bleep-one"></label>
+        </div>
+        
+        <div class="bleep" id="bleep-two-display">
+          <input type="checkbox" value="None" id="bleep-two" />
+          <label for="bleep-two"></label>
+        </div>
+        
+        <div class="bleep" id="bleep-three-display">
+          <input type="checkbox" value="None" id="bleep-three" />
+          <label for="bleep-three"></label>
+        </div>
+        
+        <div class="bleep" id="bleep-four-display">
+          <input type="checkbox" value="None" id="bleep-four" />
+          <label for="bleep-four"></label>
+        </div>
+        
+        
+      </div>
+      
+      <div id="num">
+        <div class="button button-num" id="button-1">1</div>
+        <div class="button button-num" id="button-2">2</div>
+        <div class="button button-num" id="button-3">3</div>
+        <div class="button button-num" id="button-4">4</div>
+        <div class="button button-num" id="button-5">5</div>
+        <div class="button button-num" id="button-6">6</div>
+        <div class="button button-num" id="button-7">7</div>
+        <div class="button button-num" id="button-8">8</div>
+        <div class="button button-num" id="button-9">9</div>
+        <div class="button" id="button-c"><i class="fas fa-undo" style="font-size: 15px !important;"></i></div>
+        <div class="button button-num" id="button-0">0</div>
+        <div class="button" id="button-e">E</div>
+      </div>
+      
+    </div>
+    
+  </div>
+
+        </ul>
+    </div>
+</body>
+
+<script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "100%";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+    
+    function openTab() {
+  document.getElementById("myNav").style.height = "100%";
+}
+
+function closeTab() {
+  document.getElementById("myNav").style.height = "0%";
+}
+
+// Disable checkboxes
+$('input').click(function(){
+  return false;
+});
+
+var pass = '1593',
+    temp = '',
+    pressed = 0,
+    press_max = 4;
+
+$('.button-num').click(function(){
+  
+  pressed++;
+  
+  if(pressed <= press_max){
+    $($('input')[pressed-1]).prop('checked', true);
+    temp += $(this).attr("id").split('-')[1];
+  }
+  
+});
+var timer,
+    timerduration = 300,
+    shake = 10;
+
+$('#button-e').click(function(){
+  
+  if(pass == temp){
+    
+    pressed = 0;
+    temp = '';
+    $('input').prop('checked', false);
+    
+    clearTimeout(timer);
+    timer = setTimeout(function(){
+      $('#complete').transition({ rotateY : 180, duration: timerduration });
+      $('#numpad').transition({ rotateY : 0, duration: timerduration });
+    }, timerduration*10)
+    
+    $('#complete').transition({ rotateY : 0, duration: timerduration });
+    $('#numpad').transition({ rotateY : 180, duration: timerduration });
+      $('#notice').html("Enter passcode to Begin");
+    
+    pressed = 0;
+    temp = '';
+    $('input').prop('checked', false);
+    
+  } else {
+    
+    $('#numpad')
+      .transition({ x: shake, duration: timerduration/5 })
+      .transition({ x: -shake, duration: timerduration/5 })
+      .transition({ x: shake, duration: timerduration/5 })
+      .transition({ x: -shake, duration: timerduration/5 })
+      .transition({ x: 0, duration: timerduration/5 });
+    
+      clearTimeout(timer);
+      $('#notice').html("Wrong Passcode!");
+    
+      timer = setTimeout(function(){
+        pressed = 0;
+        temp = '';
+        $('input').prop('checked', false);
+      }, timerduration);
+    
+  }
+});
+
+$('#button-c').click(function(){
+  
+  if(pressed > 0){
+    $($('input')[pressed-1]).prop('checked', false);
+    pressed--;
+    temp = temp.slice(0,pressed);
+  }
+  
+});
+    </script>
+</html>
